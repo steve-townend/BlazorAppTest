@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using global::Shared;
 
 <PageTitle>Index</PageTitle>
 
@@ -19,4 +20,13 @@ And so is hot reload - zoomin - tada
     <li>DId launchsettings.json have to change to add hot reload?? - NOPE, just set the Hot Reload icon in VS to reload on save</li>
 </ul>
 
+<p>@masterClass.Name</p>
+
+
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    private SharedClass masterClass = new SharedClass { Name = "I came from above!" };
+
+    
+}
